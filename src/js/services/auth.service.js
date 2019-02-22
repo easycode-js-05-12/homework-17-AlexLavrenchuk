@@ -16,4 +16,16 @@ export class AuthService {
                 .catch((err) => reject(err));
         });
     }
+    singUp(data) {
+        const http = new Http();
+
+        return new Promise((resolve, reject) => {
+            http.post(`${ENV.apiUrl}/public/auth/signup`, data)
+                .then((response) => {
+                    if (response.error) return reject(response);
+                    resolve(response);
+                })
+                .catch((err) => reject(err));
+        });
+    }
 }

@@ -1,11 +1,13 @@
 import { LoginComponent } from './components/login.component';
 import { HomeComponent } from './components/home.component';
 import { NotFoundComponent } from './components/notfound.component';
+import { SingUpComponent } from './components/singup.component';
 
 const routes = {
     '/': new HomeComponent(),
     '/login': new LoginComponent(),
-    '**': new NotFoundComponent()
+    '**': new NotFoundComponent(),
+    '/singup': new SingUpComponent()
 };
 
 const router = () => {
